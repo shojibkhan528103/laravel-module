@@ -26,5 +26,8 @@
         "psr-4": {
             "Modules\\Aboutus\\Tests\\": "tests/"
         }
+    },
+    "require": {
+        "livewire/livewire": "^3.5"
     }
 }
