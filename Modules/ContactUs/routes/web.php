@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Modules\Aboutus\Http\Controllers\AboutusController;
+use Modules\ContactUs\Http\Controllers\ContactUsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,4 +14,5 @@ use Modules\Aboutus\Http\Controllers\AboutusController;
 |
 */
 
-Route::get('/about-us', [AboutUsController::class, 'index'])->name('module.about.us');
+
+Route::get('/contact-us', [ContactUsController::class, 'index'])->name('module.contact.us');
