@@ -10,12 +10,16 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('module.about.us') }}">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('module.contact.us') }}">Contact Us</a>
-                    </li>
+                    @if (\Module::has('Aboutus') && \Module::isEnabled('Aboutus'))
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('module.about.us') }}">About Us</a>
+                        </li>
+                    @endif
+                    @if (\Module::has('ContactUs') && \Module::isEnabled('ContactUs'))
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('module.contact.us') }}">Contact Us</a>
+                        </li>
+                    @endif
                 </ul>
             </div>
         </div>
